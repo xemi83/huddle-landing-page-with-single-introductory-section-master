@@ -266,7 +266,9 @@ body{
 }
 
 .menu{
-    background-color: silver;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .big_form{
@@ -278,15 +280,65 @@ body{
 }
 
 .big_menu{
-    width: 16px;
-    height: 4px;
+    width: 18px;
+    height: 16px;
 }
 
 .small_menu{
-    width: 12px;
+    width: 15px;
+    height: 14px;
+}
+
+.big_menu_bar{
+    background-color: silver;
+    width: 18px;
     height: 3px;
 }
 
-.big_menu::before{
+.big_menu_bar::after{
     content: '';
+    display: block;
+    background-color: silver;
+    width: 18px;
+    height: 3px;
+    position: absolute;
+    top: 0px;
+}
+
+.big_menu_bar::before{
+    content: '';
+    display: block;
+    background-color: silver;
+    width: 18px;
+    height: 3px;
+    position: absolute;
+    bottom: 0px;
+}
+
+
+
+.small_menu_bar{
+    background-color: silver;
+    width: 15px;
+    height: 2px;
+}
+
+.small_menu_bar::after{
+    content: '';
+    display: block;
+    background-color: silver;
+    width: 15px;
+    height: 2px;
+    position: absolute;
+    top: 0px;
+}
+
+.small_menu_bar::before{
+    content: '';
+    display: block;
+    background-color: silver;
+    width: 15px;
+    height: 2px;
+    position: absolute;
+    bottom: 0px;
 }
